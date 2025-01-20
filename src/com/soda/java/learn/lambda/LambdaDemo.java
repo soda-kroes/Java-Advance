@@ -1,3 +1,5 @@
+package com.soda.java.learn.lambda;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -5,13 +7,12 @@ import java.util.List;
 
 public class LambdaDemo {
     public static void main(String[] args) {
-        Calculator calculator = new MyCalcultor();
-        Calculator calculator2 = (n1, n2) -> n1 * n2 * 10;
+       test1();
     }
 
     static void test1() {
          /*
-        MyPrinter printer = new MyPrinter() {
+        com.soda.java.learn.lambda.method.reference.MyPrinter printer = new com.soda.java.learn.lambda.method.reference.MyPrinter() {
             @Override
             public void display(String text) {
                 System.out.println(text);
@@ -22,7 +23,7 @@ public class LambdaDemo {
          */
 
         MyPrinter printer = (String text) -> System.out.println(text);
-        printer.display("Hello Java");
+        printer.print("Hello Java");
 
         /*f
          # When we can use Lambda expression
@@ -37,7 +38,7 @@ public class LambdaDemo {
 
         //call with param
         MyPrinter printer2 = text -> System.out.println(text); //if have one param we can call without use () but multi it we must use ()
-        printer2.display("Welcome to Java");
+        printer2.print("Welcome to Java");
 
         Comparator<Integer> compareByNumber = (p1, p2) -> p2 - p1; //when have multi param (p1, p2) use ()
         List<Integer> list1 = new ArrayList<>();
@@ -66,7 +67,7 @@ public class LambdaDemo {
 //        var priceMap = new HashMap<>();
 //        priceMap.put("apple", 30L);
 
-//        Calculator calculator = (a, b) -> a + b;
+//        com.soda.java.learn.lambda.method.reference.Calculator calculator = (a, b) -> a + b;
 //        System.out.println(calculator.calcul(3,4));
 
         //when we do with body to custom
@@ -86,6 +87,5 @@ public class LambdaDemo {
             return (a + b) * 2;
         }
     }
-
 
 }
